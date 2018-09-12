@@ -31,9 +31,7 @@ def book():
 		return render_template("error.html", message="No such flight with that ID.")
 
 	# Add passenger.
-	passenger = Passenger(name=name, flight_id=flight_id)
-	db.session.add(passenger)
-	db.session.commit()
+	flight.add_passenger(name)
 	return render_template("success.html")
 
 
