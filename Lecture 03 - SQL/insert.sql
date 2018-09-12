@@ -4,3 +4,4 @@ INSERT INTO flights (origin, destination, duration) VALUES ('Istanbul', 'Tokyo',
 INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'Paris', 435);
 INSERT INTO flights (origin, destination, duration) VALUES ('Moscow', 'Paris', 245);
 INSERT INTO flights (origin, destination, duration) VALUES ('Lima', 'New York', 455);
+INSERT INTO flights (origin, destination, duration) VALUES ('Istanbul', 'London', 685);
