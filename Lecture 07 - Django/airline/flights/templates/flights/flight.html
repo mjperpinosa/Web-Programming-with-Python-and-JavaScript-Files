@@ -14,4 +14,23 @@
             <li>No passengers.</li>
         {% endfor %}
     </ul>
+    <hr>
+    <h2>Add a Passenger</h2>
+    {% if non_passengers %}
+    <form action="{% url 'book' flight.ig %}">
+        {% csrf_token %}
+        <select name="passenger">
+            {% for passenger in non_passengers %}
+                <option value="{{ passenger.id }}">{{ passenger }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="submit">
+    </form>
+    {% else %}
+        <div>No passengers to add.</div>
+    {% endif %}
+
+    <br>
+
+    <a href="{% url 'index' %}">Back to full list of flights.</a>
 {% endblock %}
