@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const template = Handlebars.compile("<li>You rolled: <img src=\"images/{{ value }}.png\"></li>");
+
+            document.addEventListener("DOMCintentLoaded", () => {
+                document.querySelector("#roll").onclick = () => {
+
+                    // Generate a random roll.
+                    const roll = Math.floor((Math.random() * 6) + 1);
+
+                    // Add roll result to DOM.
+                    const content = template({"value": roll});
+                    document.querySelector("#rolls").innerHTML += content;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <button id="roll">roll</button>
+        <ul id="rolls"></ul>
+    </body>
+</html>

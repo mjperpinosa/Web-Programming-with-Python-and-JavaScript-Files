@@ -28,3 +28,6 @@ def posts():
 
 	# Return list of posts.
 	return jsonify(data)
+
+if(__name__ == "__main__"):
+	app.run(port = 5000)

@@ -52,6 +52,17 @@
 			post.className = "post";
 			post.innerHTML = contents;
 
+            // Add button to hide post.
+            const hide = document.createElement("button");
+            hide.className = "hide";
+            hdie.innerHTML = "Hide";
+            post.append(hide);
+
+            // When hide button is clicked, remove post.
+            hide.onclick = function() {
+                this.parentElement.remove();
+            }
+
 			// Add post to DOM.
 			document.querySelector("#posts").append(post);
 		}
